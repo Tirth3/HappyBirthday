@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
-import img1 from "./assets/img1.png"
+import img1 from "./assets/images.jpg"
 
 const PUZZLE_SIZE = 3; // 3x3 puzzle
 
@@ -106,7 +106,7 @@ function App() {
           transition={{ duration: 0.6 }}
           className="mt-8 p-6 bg-white rounded-lg shadow-md text-center"
         >
-          <h2 className="text-3xl font-bold text-[#FF2DD1] mb-2">Happy Birthday! 🎂</h2>
+          <h2 className="text-3xl font-bold text-[#FF2DD1] mb-2">Happy Birthday! TOPPER! 🎂</h2>
           <p className="text-lg text-[#4DFFBE]">You completed the puzzle! You're awesome 🎉</p>
         </motion.div>
       )}
