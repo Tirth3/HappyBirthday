@@ -1,12 +1,59 @@
-# React + Vite
+# Happy Birthday wish repo
+# Deploy on github pages
+## 📌 Prerequisites
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Node.js installed
+- A GitHub account
+- A Vite + React project created (`npm create vite@latest my-app --template react`)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Install **gh-pages** package
 
-## Expanding the ESLint configuration
+```bash
+npm install --save-dev gh-pages
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. Configure **vite.config.js**
+
+Add the base option — replace your-repo-name with the actual repository name.
+```
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: "/your-repo-name/",  // <- important!
+})
+```
+
+## Update **package.json** Scripts
+
+Add these scripts inside the "scripts" section:
+```
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+```
+
+## 4. Initialize Git & Push to GitHub
+```
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/<username>/<your-repo-name>.git
+git push -u origin main
+```
+
+## 5. Deploy to GitHub Pages
+```bash
+npm run deploy
+```
+
+## App Will Be Live At:
+https://<username>.github.io/<your-repo-name>/
