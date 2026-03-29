@@ -23,10 +23,10 @@ const sections = [
 
   createMessages(),
   builderStripe(),
-
+/*
   createFavourites(),
   builderStripe(),
-
+*/
   createFinale(),
 ];
 

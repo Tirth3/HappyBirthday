@@ -43,7 +43,7 @@ export function createFinale() {
 
   const tagline = document.createElement('p');
   tagline.className = 'finale-tagline reveal';
-  tagline.textContent = 'Can we fix it? YES WE CAN! 🎉🔧';
+  tagline.textContent = 'And always keep in mind "Hindi filmon ki tarah… ant mein sab theek ho jaata hai. Aur agar theek na ho, toh woh ant nahi hai."';
 
   const grid = document.createElement('div');
   grid.className = 'wishes-grid';
@@ -58,7 +58,7 @@ export function createFinale() {
 
   const sig = document.createElement('p');
   sig.className = 'finale-sig';
-  sig.innerHTML = 'Made with 🔨 and loads of love';
+  sig.innerHTML = 'May this year god be with you';
 
   section.append(starsWrap, cake, heading, tagline, grid, sig);
   return section;

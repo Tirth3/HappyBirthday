@@ -3,7 +3,6 @@
       <span class="ph-label">${label}</span>
   */
 function placeholder(colorClass, icon, label , path) {
-  console.log(path)
   return `
     <div class="placeholder-img ${colorClass}">
       <span class="ph-icon">${icon}</span>
@@ -18,7 +17,7 @@ const photos = [
   { colorClass: 'ph-blue',   icon: '🎉', label: 'SRK', path: "images/img3.jpg", caption: '🎥 Hollywood noooo, Bollywood Hell yeah',               classes: ''},
   { colorClass: 'ph-pink',   icon: '😂', label: 'HEHEHE', path: "images/img1.jpg", caption: "😂 Laugh um may not be as polite,, but hey it is pure AF",                  classes: '' },
   { colorClass: 'ph-green',  icon: '🌻', label: 'uuu a sunflower', path: "images/img2.png", caption: '🌻 Sunny and happy personality',                  classes: 'wide' },
-  { colorClass: 'ph-orange', icon: '🍕', label: 'Pizza maybe?', path: "images/img1.jpg", caption: "🍕 Don't know what you like to eat but it's okk",           classes: '' },
+  { colorClass: 'ph-orange', icon: '🍕', label: 'Sambaar maybe?', path: "images/img1.jpg", caption: "🍕 Don't know what you like to eat but it's okk",           classes: '' },
 ];
 
 export function createMemories() {
